@@ -197,6 +197,7 @@ const Video = () => {
             <ChannelDetail>
               <Link
                 to={`/channel/${channel._id}`}
+                 state={{ channel: channel }}
                 style={{ textDecoration: 'none', color: 'inherit' }}
               >
                 <ChannelName>{channel.name}</ChannelName>
