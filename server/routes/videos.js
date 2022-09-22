@@ -5,7 +5,7 @@ import {
   deleteVideo,
   getByTag,
   getVideo,
-  getVideosByUser,
+  getAllVideos,
   random,
   search,
   sub,
@@ -27,7 +27,7 @@ router.delete('/:id', verifyToken, deleteVideo);
 
 //GET VIDEO
 router.get('/find/:id', getVideo);
-
+router.get('/all', getAllVideos);
 router.put('/view/:id', addView);
 
 router.get('/trend', trend);
