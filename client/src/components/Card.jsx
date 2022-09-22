@@ -71,7 +71,13 @@ const Card = ({ type, video }) => {
           <ChannelImage type={type} src={channel.img} />
           <Texts>
             <Title>{video.title}</Title>
-            <ChannelName>{channel.name}</ChannelName>
+           <Link
+              to={`/channel/${channel._id}`}
+              state={{ channel: channel }}
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              <ChannelName>{channel.name}</ChannelName>
+            </Link>
             <Info>
               {video.views} views • {format(video.createdAt)}
             </Info>
