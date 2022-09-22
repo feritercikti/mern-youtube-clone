@@ -118,3 +118,12 @@ export const search = async (req, res, next) => {
     next(error);
   }
 };
+
+export const getAllVideos = async (req, res, next) => {
+  try {
+    const videos = await Video.find();
+    res.status(200).json(videos);
+  } catch (error) {
+    next(error);
+  }
+};
